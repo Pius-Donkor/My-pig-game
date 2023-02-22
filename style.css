@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(
+    to top left,
+    rgb(65, 173, 92) 0%,
+    rgb(70, 120, 133) 100%
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game_cont {
+  width: 70%;
+  height: 85%;
+  display: flex;
+
+  background-image: linear-gradient(
+    to bottom,
+    rgba(48, 142, 165, 0.966),
+    rgba(54, 99, 99, 0.678)
+  );
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 8px 8px 13px rgba(0, 0, 0, 0.123);
+  border: none;
+  position: relative;
+  transition: all 0.9s;
+}
+
+.player {
+  width: 50%;
+  height: 100%;
+  background-color: rgba(240, 248, 255, 0.233);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  opacity: 0.5;
+  transition: all 1s;
+}
+
+.player.active {
+  opacity: 1;
+}
+
+.current {
+  width: 80%;
+  height: 35vh;
+  background-color: rgba(3, 0, 0, 0.452);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+.current.hidden {
+  display: none;
+}
+
+.current h1 {
+  font-size: 45px;
+  text-transform: uppercase;
+  color: rgba(235, 216, 180, 0.829);
+}
+
+.inner__current,
+.score {
+  width: 80%;
+  height: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  background-color: rgba(3, 0, 0, 0.24);
+  padding: 10px;
+  color: rgba(245, 222, 179, 0.623);
+}
+
+.inner__current h2 {
+  font-size: 30px;
+}
+.inner__current p {
+  font-size: 50px;
+}
+
+.score {
+  height: 20vh;
+  background-color: rgba(3, 0, 0, 0.582);
+  font-size: 30px;
+}
+
+.score p {
+  font-size: 40px;
+}
+
+.hidden {
+  display: none;
+}
+.buttons {
+  height: 90%;
+  width: 110px;
+  position: absolute;
+  left: 44%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 30px 0 30px 0;
+  z-index: 10;
+}
+
+.buttons img {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 100px;
+  margin-left: 10px;
+  border-radius: 10px;
+  opacity: 0.7;
+}
+
+.buttons img:hover {
+  transform: scale(1.15) rotate(90deg);
+  transition: all 1s;
+}
+
+.reset {
+  margin-bottom: 50px;
+}
+
+button {
+  height: 40px;
+  font-size: 20px;
+  padding: 0 10px;
+  border: none;
+  border-radius: 20px;
+  color: rgba(0, 0, 0, 0.884);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.39);
+  background-color: rgba(255, 255, 255, 0.514);
+}
+
+button:hover {
+  transform: scale(1.16);
+}
+
+.winner p {
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.712);
+  text-decoration: wavy;
+}
